@@ -37,9 +37,8 @@ in any hospital.
 | --- | --- |
 | Manual entering of the details of the donor and the recipient.| An automated system is implemented for this purpose. |
 | The blood bag details are written down leading to several errors. | A QR code printed on the blood bag is used to store the details of the blood. |
-| When blood is needed, difficulty to check whether the blood is available or not | Searching has been made easier due to the
-blockchain as data can be easily retrieved.|
-| Need for centralized organisational leadership | Auto-governance by solidity smart contract |                                         | Risk of non-repayment of loans is high | Risk is mitigated by introducing peer-pressure on the blockchain (main innovation) |
+| When blood is needed, difficulty to check whether the blood is available or not | Searching has been made easier due to the blockchain as data can be easily retrieved.|
+|  | The donor used to be unaware of what happens to the donated blood.|                                         | Notification makes the donor aware of what happens to the donated blood. |
 | Possibility of corruption inside group | All transactions are open and transparent |
-| [Rural people find bank braches forbidding](https://thewire.in/171614/microfinance-bandhan-public-sector-banks/) | Intuitive single-page web-interface for all transactions |
+| Manually hospitals had to be made aware aboutthe urgency of blood bags of certain types | Request notifications will be sent tothe neighboring hospitals regarding the blood urgency.|
 
