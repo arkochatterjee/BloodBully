@@ -34,6 +34,16 @@ users as we are using Hyperledger Frabric which is primarily a Permissioned Data
 3. Notifications will be sent to the neighboring hospital in the event of non-availability of blood
 in any hospital.
 
+![Web Screenshot 1](https://github.com/arkochatterjee/BloodBully/blob/master/src/web1.jpeg)
+![Web Screenshot 2](https://github.com/arkochatterjee/BloodBully/blob/master/src/web2.jpeg)
+![Web Screenshot 3](https://github.com/arkochatterjee/BloodBully/blob/master/src/web3.jpeg)
+![Web Screenshot 4](https://github.com/arkochatterjee/BloodBully/blob/master/src/web4.jpeg)
+![Web Screenshot 5](https://github.com/arkochatterjee/BloodBully/blob/master/src/web5.jpeg)
+![Web Screenshot 6](https://github.com/arkochatterjee/BloodBully/blob/master/src/web6.jpeg)
+
+
+
+
 ![Android Screenshot 1](https://github.com/arkochatterjee/BloodBully/blob/master/src/android1.jpeg)
 
 ![Android Screenshot 2](https://github.com/arkochatterjee/BloodBully/blob/master/src/android2.jpeg)
