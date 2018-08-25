@@ -34,6 +34,11 @@ users as we are using Hyperledger Frabric which is primarily a Permissioned Data
 3. Notifications will be sent to the neighboring hospital in the event of non-availability of blood
 in any hospital.
 
+![Android Screenshot 1](https://github.com/arkochatterjee/BloodBully/blob/master/src/android1.jpeg)
+
+![Android Screenshot 2](https://github.com/arkochatterjee/BloodBully/blob/master/src/android2.jpeg)
+
+
 ## Impact/Outcome
 
 | Problems | Solutions |
@@ -46,7 +51,7 @@ in any hospital.
 | Manually hospitals had to be made aware aboutthe urgency of blood bags of certain types | Request notifications will be sent tothe neighboring hospitals regarding the blood urgency.|
 
 
-## Tech Stack: 
+## Tech Stack
 Hyperladger Fabric
 Firebase
 Front-End (HTML,CSS,BootStrap,JS,JQuery)
