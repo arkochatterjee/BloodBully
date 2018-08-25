@@ -1,4 +1,7 @@
 Made by _Ashim Sharma_, _Neha Unni_, _Ayushi Gupta_, _Nikhil Narayan_ , _Arko Chatterjee_
+
+[Demo video](https://www.youtube.com/watch?v=YnKUQUzhpls&feature=youtu.be)<br>
+
 # Accenture Blockchain Hackathon 2018 | Team Envisions
 
 Medical Industry is world’s largest and fastest growing industries. It is an aggregation and integration of
@@ -42,6 +45,12 @@ in any hospital.
 | Possibility of corruption inside group | All transactions are open and transparent |
 | Manually hospitals had to be made aware aboutthe urgency of blood bags of certain types | Request notifications will be sent tothe neighboring hospitals regarding the blood urgency.|
 
-_*Deps*: Hyperladger Fabric, Firebase, Front-End, Android, RESTAPIs
+
+## Tech Stack: 
+Hyperladger Fabric
+Firebase
+Front-End (HTML,CSS,BootStrap,JS,JQuery)
+Android Studio
+RESTAPIs
 
 ![Alt Text](https://github.com/arkochatterjee/BloodBully/blob/master/src/logo.jpeg)
