@@ -42,3 +42,6 @@ in any hospital.
 | Possibility of corruption inside group | All transactions are open and transparent |
 | Manually hospitals had to be made aware aboutthe urgency of blood bags of certain types | Request notifications will be sent tothe neighboring hospitals regarding the blood urgency.|
 
+_*Deps*: Hyperladger Fabric, Firebase, Front-End, Android, RESTAPIs
+
+![Alt Text](https://github.com/rounakdatta/Xcheck/blob/master/src/logo.png)
