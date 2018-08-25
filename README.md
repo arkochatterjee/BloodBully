@@ -44,4 +44,4 @@ in any hospital.
 
 _*Deps*: Hyperladger Fabric, Firebase, Front-End, Android, RESTAPIs
 
-![Alt Text](https://github.com/arkochatterjee/BloodBully/blob/master/logo.jpeg)
+![Alt Text](https://github.com/arkochatterjee/BloodBully/blob/master/logo.jpeg")
