@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hospital Login</title>
+	 
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="hackstyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyClFdzraZJk88dKLMo2HtsXaIioKjPApm8",
+    authDomain: "bloodbully.firebaseapp.com",
+    databaseURL: "https://bloodbully.firebaseio.com",
+    projectId: "bloodbully",
+    storageBucket: "bloodbully.appspot.com",
+    messagingSenderId: "428035106166"
+  };
+  firebase.initializeApp(config);
+  
+</script>
+
+</head>
+
+<body style="background-image: url(preimg2.jpg)">
+
+<div class = 'row'>
+<div class = 'block'><img src="logo.png" style="height: 50px; width: 50px;margin-right: 20px;"/></div>
+<div class = 'block'><h1 style="color: white; font-family: Times New Roman;"><strong>BLOOD BULLY</strong></h1></div>
+</div>
+
+<div id="menu-nav" style="background-color: transparent; box-shadow: 1px 2px 13px 2px #212529;">
+  <div id="navigation-bar">
+    <ul>
+      <li class="active"><a href="#" style="color: #ffffff;"><i class="fa fa-home" onclick="myfun1();"></i><span onclick="myfun1();"><strong>Home</strong></span></a></li>
+      <li><a href="#" data-toggle="modal" style="text-decoration: none; color: #ffffff;" data-target="#exampleModal"><i class="fa fa-user-plus" onclick="myfun();"></i><span style="color: #ffffff;" onclick="myfun();"><strong>Donor</strong></span></a></li>
+      <li><a href="#" data-toggle="modal" data-target="#exampleModal2" style="color: #ffffff;"><i class="fa fa-heartbeat" onclick="myfun();"></i><span style="color: #ffffff;" onclick="myfun();"><strong>Recipent</strong></span></a></li>
+      <li><a href="#"  data-toggle="modal" data-target="#exampleModal1" style="color: #ffffff;"><i class="fa fa-search" onclick="myfun();"></i><span onclick="myfun();" style="color: #ffffff;" ><strong>Search</strong></span></a></li>
+      <li><a href="#"><i class="fa fa-ambulance" style="color: #ffffff;" onclick="myfun();"></i><span style="color: #ffffff;" onclick="myfun();"><strong>Transfer</strong></span></a></li>
+      <li><a href="#"><i class="fa fa-bitcoin" style="color: #ffffff;" onclick="myfun();"></i><span style="color: #ffffff;" onclick="myfun();"><strong>Blockchain</strong></span></a></li>
+      <li><a href="#"><i class="fa fa-bell" style="color: #ffffff;" onclick="myfun();"></i><span style="color: #ffffff;" onclick="myfun();"><strong>Notification</strong></span></a></li>
+      <li><a href="#" onclick="logout()" style="color: #ffffff;"><i class="fa fa-sign-out"></i><span style="color: #ffffff;"><strong>Logout</strong></span></a></li>
+
+      </ul>
+  </div>
+</div>
+       <!--<div>
+         <img src="logo.png" style="height: 150px; width: 150px; margin-top: 30px;margin-left: 35px;">
+       </div>-->   
+      <div id="home_content" style="background-color: transparent; width: 60%; margin: 10px auto; box-shadow: 1px 2px 13px 2px #212529;">
+      <p style="text-align: center; font-size: 20px; color: white; margin-top: 40px; padding-top: 30px;"><strong>“Bring a life back to power. Make blood donation your responsibility.”</strong></p>
+      <p style="font-size: 15px; color: white; margin-top: 20px; margin-left: 50px; margin-right: 50px;">A blood donation occurs when a person voluntarily has blood drawn and used for transfusions and/or made into bio pharmaceutical medications. It plays a vital role in Medical Industry by saving livses of many. There’s no end to the benefits of donating blood for those who need it. According to the Red Cross, one donation can save as many as three lives, and someone in India needs blood every two seconds. One of the common problems that the medical industry is facing now a days is a difficulty in keeping track of where the blood being donated by the donors is used. Half of the blood donated does not reach the patients in need of it. Even if it reaches them, the recipients have to pay a huge amount of money for the blood even though it is supposed to be free. What happens in between the donation and reception?What is supposed to be a simple process is further complicated by those in charge of the transfer of blood from the donor to the recipient. The recipient of the blood suffers due to the irresponsibility and profiteering nature of the middle man.</p>
+      <p style="font-size: 15px; color: white; margin-top: 10px; margin-left: 50px; margin-right: 50px; padding-bottom: 30px;">This is where Blood Bully comes into existence to show transparency of donated blood. It is an effort to make blood donations easier and quicker by keeping track of where donated blood goes. Thus reducing the involvement of middlemen.</p>
+    </div>
+
+
+      <div class="modal fade" id="exampleModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 100px;">
+      
+    
+  <section class="section" id="section">
+    <header>
+  	
+    	<button style="font-size: 25px; color: #ffffff;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+      <h3>Form</h3>
+    </header>
+    <main>
+
+      <div id="myform1">
+
+        <div class="form-item box-item">
+          <input type="number" name="name" id="BatchID" placeholder="Batch ID" required />
+         
+        </div>
+
+         <div class="form-item">
+          <center><span id="submit1" style="color: white;" class="submit" onclick='myFunction();'>Next</span></center>
+        </div>
+</div>
+<div id="myform" style="display: none;">
+        <div class="form-item box-item">
+        	<label style="color: #8A0707; display: block; font-size: 16px; width: 100%; background-color: transparent; border: none; padding: 8px 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none;">Blood Type</label>
+        	<select class="selectpicker" data-style="btn-danger" id="BloodType" style="border-bottom: 1px solid #8A0707; display: block; width: 100%" required>
+        	<option selected disabled>Select Blood Type</option>
+          <option>A +ve</option>
+          <option>A -ve</option>
+          <option>B +ve</option>
+          <option>B -ve</option>
+          <option>AB +ve</option>
+          <option>AB -ve</option>
+          <option>A1 +ve</option>
+          <option>A1 -ve</option>
+          <option>A2 +ve</option>
+          <option>A2 -ve</option>
+          <option>A1B +ve</option>
+          <option>A1B -ve</option>
+          <option>A2B +ve</option>
+          <option>A2B -ve</option>
+          <option>O +ve</option>
+          <option>O -ve</option>
+          </select>
+        </div>
+
+        <div class="form-item box-item">
+        	<label style="color: #8A0707; display: block; font-size: 16px; width: 100%; background-color: transparent; border: none; padding: 8px 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; margin-top: 10px;">Donation Date</label>
+        	 <input type="Date" disabled placeholder="Donation Date" id="DonationDate" name="donationdate" required style="border-bottom: 1px solid #8A0707; display: block; width: 100%" />
+        </div>
+
+       <div class="form-item box-item">
+          <input type="number" style="margin-top: 25px;" name="aadhar no" placeholder="Aadhar no" id="AadharNumber" required data-number maxlength="12" />
+        </div>
+
+         <div class="form-item box-item">
+          <input type="text" name="name" placeholder="Hospital Name"  style="margin-top: 20px;"  id="HospitalName" maxlength="100" onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))' required/>
+         
+        </div>
+      
+        <div class="form-item box-item">
+          <input type="number" name="phone" placeholder="Mobile" style="margin-top: 20px;" id="Mobile" required data-number maxlength="10" />
+        </div>
+
+        <div class="form-item">
+          <center><input id="submit" type="submit" style="color: white;" class="submit" onclick='pushdata();' /></center>
+        </div>
+      
+</main>
+    <i class="wave"></i>
+  </section>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+      <div class="modal fade" id="exampleModal1" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 100px;">
+    	<section class="section">
+    <header>
+    	<button style="font-size: 25px; color: #ffffff;"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+      <h3>Search</h3>
+    </header>
+    <main>
+      <div>
+        <div class="form-item box-item">
+          <label style="color: #8A0707; display: block; font-size: 16px; width: 100%; background-color: transparent; border: none; padding: 8px 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none;">Blood Type</label>
+        	<select class="selectpicker" data-style="btn-danger" id="Blood_t" style="border-bottom: 1px solid #8A0707; display: block; width: 100%" required>
+        	<option selected disabled>Select Blood Type</option>
+          <option>A +ve</option>
+          <option>A -ve</option>
+          <option>B +ve</option>
+          <option>B -ve</option>
+          <option>AB +ve</option>
+          <option>AB -ve</option>
+          <option>A1 +ve</option>
+          <option>A1 -ve</option>
+          <option>A2 +ve</option>
+          <option>A2 -ve</option>
+          <option>A1B +ve</option>
+          <option>A1B -ve</option>
+          <option>A2B +ve</option>
+          <option>A2B -ve</option>
+          <option>O +ve</option>
+          <option>O -ve</option>
+          </select>
+         
+        </div>
+        
+        <div class="form-item">
+          <center><span id="submit" style="color:white;" class="submit" onclick= "submitData();" data-dismiss="modal">Search</span></center>
+           <!--<p id='display'></p>
+           <p id='dis'></p>-->
+          
+        </div>
+      </div>
+    </main>
+    <i class="wave"></i>
+  </section>
+    </div>
+</div>
+</div>
+
+<table style="display:none;" id="table_hack">
+	<thead>
+  <tr>
+    <th style="text-align: center;">ID</th>
+    <th style="text-align: center;">BLOOD TYPE</th>
+    <th style="text-align: center;">DONATION DATE</th>
+  </tr>
+</thead>
+<tbody>
+   <tr>
+    <!--<td id="b_id"></td>
+    <td id="blood_type"></td>
+    <td id="donation_date"></td>-->
+  </tr>
+</tbody>
+</table>
+
+<div class="modal fade" id="exampleModal2" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 100px;">
+    	<section class="section">
+    <header>
+    	<button style="font-size: 25px; color: #ffffff;"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+      <h3>Form</h3>
+      
+    </header>
+    <main>
+      <div>
+        <div class="form-item box-item">
+          <input type="number" name="name" id="Recipient_ID" placeholder="Recipient ID" maxlength="10" required />
+         
+        </div>
+     
+        <div class="form-item box-item">
+        	<label style="color: #8A0707; display: block; font-size: 16px; width: 100%; background-color: transparent; border: none; padding: 8px 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none;">Blood Type</label>
+        	<select required="required" class="selectpicker" data-style="btn-danger" id="Blood_Type" style="border-bottom: 1px solid #8A0707; display: block; width: 100%">
+        	<option selected disabled>Select Blood Type</option>
+          <option>A +ve</option>
+          <option>A -ve</option>
+          <option>B +ve</option>
+          <option>B -ve</option>
+          <option>AB +ve</option>
+          <option>AB -ve</option>
+          <option>A1 +ve</option>
+          <option>A1 -ve</option>
+          <option>A2 +ve</option>
+          <option>A2 -ve</option>
+          <option>A1B +ve</option>
+          <option>A1B -ve</option>
+          <option>A2B +ve</option>
+          <option>A2B -ve</option>
+          <option>O +ve</option>
+          <option>O -ve</option>
+          </select>
+          
+        </div>
+
+
+        
+        <div class="form-item">
+          <center><input type="submit" name="submit" style="color:white;" id="submit" class="submit" onclick='pushdata1();' /></center>
+        </div>
+      </div>
+    </main>
+    
+    <i class="wave"></i>
+  </section>
+    	</div>
+    </div>
+</div>
+
+ 
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    function myfun() {
+      document.getElementById('home_content').style.display='none';
+      document.getElementById('table_hack').style.display='none';
+    }
+    function myfun1() {
+      document.getElementById('home_content').style.display='block';
+      document.getElementById('table_hack').style.display='none';
+    }
+</script>
+
+<script type="text/javascript">
+	var date = new Date();
+	var day= date.getDate();
+	var month = date.getMonth() + 1;
+	var year = date.getFullYear();
+
+	if(month<10) month="0"+month;
+	if(day<10) day="0" + day;
+
+	var today = year + "-" + month + "-" + day;
+	document.getElementById('DonationDate').value = today;
+</script>
+
+<script type="text/javascript">
+	
+	function myFunction() {
+    document.getElementById('home_content').style.display='none';
+		var ab=document.getElementById('BatchID').value;
+
+		if(ab != '') {
+     var x=document.getElementById('myform');
+     var y=document.getElementById('submit1');
+     if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+	
+	submit1.style.display="none";
+}
+
+else{
+    alert('Fill it Please!');
+}
+}
+</script>
+
+<script type="text/javascript">
+  
+  function pushdata1(){
+    document.getElementById('home_content').style.display='none';
+    var Recipient_ID1 = document.getElementById('Recipient_ID');
+    var Blood_Type1 = document.getElementById('Blood_Type');
+
+    var Recipient_ID = Recipient_ID1.value;
+    var Blood_Type = Blood_Type1.value;
+
+    if(Recipient_ID != '' && Blood_Type != '' && Blood_Type != 'Select Blood Type'){
+    var db = firebase.database();
+    var refa = db.ref('/Recipent');
+    refa.push({
+        Recipient_ID: Recipient_ID,
+        Blood_Type: Blood_Type
+    });
+
+    Recipient_ID1.value='';
+    Blood_Type1.value='Select Blood Type';
+    
+}else{
+	alert('Fill it Please');
+}
+  
+  };
+
+</script>
+<script type="text/javascript">
+
+	function pushdata() {
+    document.getElementById('home_content').style.display='none';
+
+    var BatchID1=document.getElementById('BatchID');
+    var BloodType1=document.getElementById('BloodType');
+    var DonationDate1=document.getElementById('DonationDate');
+    var AadharNumber1=document.getElementById('AadharNumber');
+    var HospitalName1=document.getElementById('HospitalName');
+    var Mobile1=document.getElementById('Mobile');
+
+    var BatchID = BatchID1.value;
+    var BloodType = BloodType1.value;
+    var DonationDate = DonationDate1.value;
+    var AadharNumber = AadharNumber1.value;
+    var HospitalName = HospitalName1.value;
+    var Mobile = Mobile1.value;
+    var ChildClass=BloodType+' : '+BatchID;
+
+
+    if(BatchID != '' && BloodType != '' && DonationDate != '' && AadharNumber != '' && HospitalName != '' && Mobile != '' && BloodType != 'Select Blood Type') {
+
+     var db = firebase.database();
+     var refa1= db.ref('Donor/'+ChildClass);
+
+     refa1.set({
+          BatchID: BatchID,
+          BloodType: BloodType,
+          DonationDate: DonationDate,
+          AadharNumber: AadharNumber,
+          HospitalName: HospitalName,
+          Mobile: Mobile
+     });
+
+    var z=document.getElementById('myform1');
+
+    BatchID1.value = '';
+    BloodType1.value='Select Blood Type';
+    DonationDate1.value = '';
+    AadharNumber1.value = '';
+    HospitalName1.value = '';
+    Mobile1.value = '';   
+}
+
+else{
+	alert('Fill it Please!');
+}
+ 
+  };
+
+</script>
+
+<script type="text/javascript">
+
+        function submitData() {
+          document.getElementById('home_content').style.display='none';
+  var database = firebase.database();
+  var readRef = database.ref('/Donor');
+  var bloodtype1 = document.getElementById('Blood_t');
+
+  var bloodtype = bloodtype1.value;
+
+ var count =0;
+  console.log(bloodtype)
+  readRef.once('value', function(snapshot) {
+    var searchdet = snapshot.val();
+    console.log(searchdet);
+    //document.getElementById('').innerHTML = searchdet.value;
+    var keys = Object.keys(searchdet);
+    keys.forEach(function(key) {
+      //console.log(searchdet[key].BloodType );
+
+        if (searchdet[key].BloodType == bloodtype) {
+            count++;
+            var BatchID =searchdet[key].BatchID ;
+            			var BloodType= searchdet[key].BloodType;
+            			var DonationDate= searchdet[key].DonationDate;
+            			var content = '';
+            			content += '<tr>';
+            			content += '<td>' + BatchID + '</td>'; //column1
+            			content += '<td>' + BloodType + '</td>';//column2
+            			content += '<td>' + DonationDate + '<td>';
+            			content += '</tr>';
+
+        $('#table_hack').append(content);
+            			
+        }
+        //else{
+        //	$(#table_hack).
+    
+        //}
+    });
+ console.log(count);
+//document.getElementById('dis').innerHTML=count;
+  });
+  console.log(count);
+  document.getElementById('submit').value = '';
+  bloodtype1.value = 'Select Blood Type';
+
+var xyz=document.getElementById('table_hack');
+table_hack.style.display="block";
+
+
+
+}
+
+
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log("success");
+  } else {
+      window.location="index.html";
+
+  }
+  
+
+});
+function logout()
+{
+  firebase.auth().signOut().then(function () {
+      window.location="index.html";
+      // outputFirebaseData();
+    })
+ .catch(function (err) {
+   // Handle errors
+ });
+}
+
+    </script>
+
+
+</html>
